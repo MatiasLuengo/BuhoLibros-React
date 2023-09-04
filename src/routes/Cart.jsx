@@ -1,5 +1,6 @@
 import { CartContext } from "../context/cartContext";
 import { useContext } from "react";
+import imgBagShop from "../assets/bagshopT.png"
 
 export const Cart = ({  }) => {
     const cartContext = useContext(CartContext);
@@ -33,7 +34,7 @@ export const Cart = ({  }) => {
         <div className="cart">
             {isEmpty &&
             <div className="emptyCart">
-                <img src="../src/assets/bagshopT.png" className="imgEmptyCart" alt="Bolsa de compra vacía" />
+                <img src={imgBagShop} className="imgEmptyCart" alt="Bolsa de compra vacía" />
                 <p>¡Empieza un carrito de compras!</p>
             </div>
             }

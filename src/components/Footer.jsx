@@ -1,4 +1,6 @@
 import { Brand } from "./Brand";
+import imgPagos from "../assets/pagos.png"
+
 export const Footer = ({  }) => {
     return (
         <>
@@ -22,7 +24,7 @@ export const Footer = ({  }) => {
                 </div>
                 <div className="className">
                     <h4>Metodos de pago</h4>
-                    <img src="../assets/pagos.png" alt="Métodos de pago" className="pagos"/>
+                    <img src={imgPagos} alt="Métodos de pago" className="pagos"/>
                 </div>
             </div>
             <div className="redes">

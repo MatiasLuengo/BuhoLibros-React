@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const NavBar = () => {
     return (
     <div className="navBarGrl">
-        <Brand titulo="BuhoLibros"/>
+        <Brand title="BuhoLibros"/>
         <nav className="primaryNav">
             <div className="dropdown">
             <Link className="underlined" to={`/categorias/Novelas`}>Novelas</Link>

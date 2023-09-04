@@ -58,12 +58,14 @@ body::-webkit-scrollbar-thumb{
   align-items: center;
 }
 .brandLogo{
-background-image: url("./assets/logo.png");
+/* background-image: url("./assets/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 80px;
-  width: 80px;
+  background-position: center; */
+  /* height: 80px;
+  width: 80px; */
+  object-fit: contain;
+  max-width: 60px;
 }
 .brandTittle{
   margin: 0;
