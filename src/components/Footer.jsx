@@ -22,7 +22,7 @@ export const Footer = ({  }) => {
                 </div>
                 <div className="className">
                     <h4>Metodos de pago</h4>
-                    <img src="../public/assets/pagos.png" alt="Métodos de pago" className="pagos"/>
+                    <img src="../src/assets/pagos.png" alt="Métodos de pago" className="pagos"/>
                 </div>
             </div>
             <div className="redes">

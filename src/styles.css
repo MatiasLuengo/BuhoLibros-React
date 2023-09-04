@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb{
   align-items: center;
 }
 .brandLogo{
-background-image: url("../public/assets/logo.png");
+background-image: url("./assets/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
