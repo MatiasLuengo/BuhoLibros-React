@@ -1,5 +1,6 @@
 import { ItemList } from "./ItemList";
-import { gets } from "../scripts/asyncMockBooks";
+import { Loader } from "./Loader";
+import { gets } from "../scripts/getsBooksFirestore";
 import { useState, useEffect } from "react";
 
 export const ItemListContainer = ({ getMethod, category, subcategory }) => {
@@ -10,14 +11,17 @@ export const ItemListContainer = ({ getMethod, category, subcategory }) => {
         setLoading(true),
         gets[getMethod](category, subcategory)
         .then((result) =>{
-            setProducts([...result]);
+            setProducts(result.docs.map((doc)=>({id: doc.id, ...doc.data()})));
         }).catch((err) => console.error(err))
         .finally(() => setLoading(false));
     },[category, subcategory]);
 
     return (
-        <div>
-            <ItemList products={products} loading={loading}></ItemList>
+        <div className="itemListContainer">
+            {loading && <Loader></Loader>}
+            {!loading &&
+            <ItemList products={products}></ItemList>
+            }
         </div>
     );
 };

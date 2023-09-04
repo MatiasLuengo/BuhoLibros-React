@@ -3,7 +3,8 @@ import { CartWidget } from "./CartWidget";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
-    return (<div className="navBarGrl">
+    return (
+    <div className="navBarGrl">
         <Brand titulo="BuhoLibros"/>
         <nav className="primaryNav">
             <div className="dropdown">
@@ -31,5 +32,6 @@ export const NavBar = () => {
             {/* <a className="underlined" href="/Contacto">Autores</a> */}
         </nav>
         <CartWidget/>
-    </div>);
+    </div>
+    );
 };

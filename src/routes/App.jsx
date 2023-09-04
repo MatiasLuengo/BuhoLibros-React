@@ -1,4 +1,5 @@
-import { ItemListContainer } from '../components/ItemListContainer'
+import { ItemListContainer } from '../components/ItemListContainer';
+import { Link } from "react-router-dom";
 
 function App() {
 
@@ -12,11 +13,11 @@ function App() {
       navigation="true" 
       pagination="true"
       autoplay="true">
-        <swiper-slide><img className="slideImg" src="./src/assets/slide1.png" alt="slide1" /></swiper-slide>
-        <swiper-slide><img className="slideImg" src="./src/assets/slide2.png" alt="slide2" /></swiper-slide>
-        <swiper-slide><img className="slideImg" src="./src/assets/slide3.png" alt="slide3" /></swiper-slide>
+        <swiper-slide><Link to={`/categorias/Infantiles`}><img className="slideImg" src="./src/assets/slide1.png" alt="Infantiles" /></Link></swiper-slide>
+        <swiper-slide><Link to={`/productos/U0r7x5JmicheVycuw92I`}><img className="slideImg" src="./src/assets/slide2.png" alt="Malasangre" /></Link></swiper-slide>
+        <swiper-slide><Link to={`/productos/5Vam5bUmKok0SPW1nX5d`}><img className="slideImg" src="./src/assets/slide3.png" alt="Fantasticland" /></Link></swiper-slide>
       </swiper-container>
-      <h2>Nuestra Coleccion!</h2>
+      <h2 className='greeting'>Nuestra Coleccion!</h2>
       <ItemListContainer getMethod={"getBooks"}/>
     </>
   )

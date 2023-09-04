@@ -1,27 +1,32 @@
 import {useState, useEffect, useRef} from "react";
+import { CartContext } from "../context/cartContext";
+import { useContext } from "react";
 
-export function useCounter (outSideStock, initial) {
-    const [purchase, setPurchase] = useState(initial);
+export function useCounter (outSideStock, initial, itemObj) {
+    const cartContext = useContext(CartContext);
+
+    const [purchaseQuantity, setPurchaseQuantity] = useState(initial);
     const purchaseRef = useRef(initial);
     const [stock, setStock] = useState(outSideStock);
     const [stockFlag, setStockFlag] = useState(true);
 
     const addToTrolley = () =>{
-        if(purchase < stock){
-            setPurchase (purchase + 1);
+        if(purchaseQuantity < stock){
+            setPurchaseQuantity (purchaseQuantity + 1);
             purchaseRef.current++;
         }else alert("Limite de stock");
     };
     const removeToTrolley = () =>{
-        if(purchase > initial){
-            setPurchase (purchase - 1);
+        if(purchaseQuantity > initial){
+            setPurchaseQuantity (purchaseQuantity - 1);
             purchaseRef.current--;  
         }
     };
     const onAdd = () =>{
-        if(purchase > 0){
-            setStock(stock - purchase);
-            alert(`Se agrego ${purchase} items al carrito`);
+        if(purchaseQuantity > 0){
+            setStock(stock - purchaseQuantity);
+            const subTotal = purchaseQuantity * itemObj.price;
+            cartContext.AddItem(purchaseQuantity, itemObj, subTotal);
         }else alert("Debe seleccionar cuantos items agregar");
     }
 
