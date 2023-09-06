@@ -3,6 +3,7 @@ import { createContext, useState } from "react";
 import { firestoreDb } from "../firebase/client";
 import toast from 'react-hot-toast';
 
+
 export const CartContext = createContext([]);
 
 export function CartProvider ({children}) {
@@ -50,6 +51,7 @@ export function CartProvider ({children}) {
             .catch((error) => console.error(error))
             .finally();
         Clear();
+        
     }
 
     return <CartContext.Provider value={{

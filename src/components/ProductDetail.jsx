@@ -34,6 +34,7 @@ export const ProductDetail = ({product}) =>{
                 <div className="descriptionContainer">
                     <img src={product.image} alt=""></img>
                     <p>{product.description}</p>
+                    <li>Autor: {product.author}</li>
                 </div>
             </article>
         );

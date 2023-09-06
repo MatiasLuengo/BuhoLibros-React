@@ -10,10 +10,10 @@ export const Cart = ({  }) => {
 
     const formActive = () => {
         const formDisplay = document.getElementById("purchaseForm");
-        formDisplay.style.display = "grid";
+        formDisplay.style.display = "flex";
         const buttonDisplay = document.getElementById("buttonShow");
         buttonDisplay.style.display = "none";
-        }
+    }
 
     const handleSubmitData = (e) => {
         e.preventDefault();
@@ -28,7 +28,7 @@ export const Cart = ({  }) => {
                 dayPurchase: new Date(),
             };
             cartContext.enviodedatos(formData);
-        }else toast.error('Ingrese el mismo E-mail', {duration: 3000, position: 'top-center',});
+        }else toast.error('Debe ingresar el mismo E-mail', {duration: 3000, position: 'top-center',});
     }
 
     return (
@@ -64,23 +64,37 @@ export const Cart = ({  }) => {
                     </div>
                     <button id="buttonShow" className="showForm" onClick={formActive}>Seguir con la compra</button>
                     <form id="purchaseForm" action="" onSubmit={(event) => handleSubmitData(event)}>
-                        <h4 id="formTitle">Detalles de facturación:</h4>
-                        <label htmlFor="name">Nombre</label>
-                        <input type="text" name="name" id="name" placeholder="Ej: Camila" required/>
-                        <label htmlFor="lastName">Apellido</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Ej: Perez" required/>
-                        <label htmlFor="phone">Teléfono</label>
-                        <input type="text" name="phone" id="phone" placeholder="Ej: 351 0000 0000" required/>
-                        <label htmlFor="email">E-mail</label>
-                        <input type="email" name="email" id="email" placeholder="Ej: Camila@gmail.com" required/>
-                        <label htmlFor="emailCheck">Repetir E-mail</label>
-                        <input type="email" name="emailCheck" id="emailCheck" placeholder="Ej: Camila@gmail.com" required/>
+                        <h4 id="formTitle">Detalles de facturación:</h4>                       
+                        <div className="inputWrapper">
+                        <i className='bx bx-user'></i>
+                            <input id="name" className="inputField" type="text" required/>
+                            <label htmlFor="name" className="inputLabel">Nombre</label>
+                        </div>
+                        <div className="inputWrapper">
+                        <i className='bx bx-user'></i>
+                            <input id="lastName" className="inputField" type="text" required/>
+                            <label htmlFor="lastName" className="inputLabel">Apellido</label>
+                        </div>
+                        <div className="inputWrapper">
+                        <i className='bx bxs-phone'></i>
+                            <input id="phone" className="inputField" type="text" required/>
+                            <label htmlFor="phone" className="inputLabel">Teléfono</label>
+                        </div>
+                        <div className="inputWrapper">
+                        <i className='bx bx-envelope'></i>
+                            <input id="email" className="inputField" type="email" required/>
+                            <label htmlFor="email" className="inputLabel">Email</label>
+                        </div>
+                        <div className="inputWrapper">
+                        <i className='bx bx-envelope'></i>
+                            <input id="emailCheck" className="inputField" type="email" required/>
+                            <label htmlFor="emailCheck" className="inputLabel">Email</label>
+                        </div>
                         <button className="buyNow" id="submit" type="submit">Comprar ahora</button>
                     </form>
                 </div>
             </div>
             }
-
         </div>
     );
 };
