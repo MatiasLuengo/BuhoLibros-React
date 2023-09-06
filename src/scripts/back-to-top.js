@@ -1,7 +1,4 @@
-let mybutton = document.getElementById("BackToTop");
-
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
+export function scrollFunction(mybutton) {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         mybutton.style.display = "block";
     } else {
@@ -9,7 +6,7 @@ function scrollFunction() {
     }
 }
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+export function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }

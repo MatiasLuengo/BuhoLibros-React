@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export const Item = ({ product }) => {
-
     return (
         <Link key={product.id} to={`/productos/${product.id}`}>
             <article className="item">

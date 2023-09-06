@@ -29,7 +29,6 @@ export const NavBar = () => {
             </div> 
             <Link className="underlined" to={`/categorias/Infantiles`}>Infantiles</Link>
             <Link className="underlined" to={`/categorias/BestSellers`}>BestSellers</Link>
-            {/* <a className="underlined" href="/Contacto">Autores</a> */}
         </nav>
         <CartWidget/>
     </div>

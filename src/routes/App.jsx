@@ -20,7 +20,7 @@ function App() {
         <swiper-slide><Link to={`/productos/U0r7x5JmicheVycuw92I`}><img className="slideImg" src={imgMalasangre} alt="Malasangre" /></Link></swiper-slide>
         <swiper-slide><Link to={`/productos/5Vam5bUmKok0SPW1nX5d`}><img className="slideImg" src={imgFantasticland} alt="Fantasticland" /></Link></swiper-slide>
       </swiper-container>
-      <h2 className='greeting'>Nuestra Coleccion!</h2>
+      <h2 className='greeting'>Nuestra Colección!</h2>
       <ItemListContainer getMethod={"getBooks"}/>
     </>
   )

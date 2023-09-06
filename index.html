@@ -10,26 +10,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <button onclick="topFunction()" id="BackToTop"><i class='bx bx-chevrons-up'></i></button>
-    <a class="btn-wpp" href="#" target="_blank" rel="noreferrer noopener">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
     <script type="module" src="/src/main.jsx"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
-    <script defer>
-      let mybutton = document.getElementById("BackToTop");
-      window.onscroll = function() {scrollFunction()};
-      function scrollFunction() {
-          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-              mybutton.style.display = "block";
-          } else {
-              mybutton.style.display = "none";
-          }
-      }
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
   </body>
 </html>

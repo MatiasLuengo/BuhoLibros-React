@@ -24,7 +24,7 @@ export const ItemList = ({ products }) => {
             <div className="searchResult">
                 <div className="search">
                     <label htmlFor="search"><i className='bx bx-search'></i></label>
-                    <input onChange={e => setSearchTerm(e.target.value)} name="search" id="search" className="inputSearch" type="text" placeholder="Search"/>
+                    <input onChange={e => setSearchTerm(e.target.value)} name="search" id="search" className="inputSearch" type="text" placeholder="Búsqueda"/>
                 </div>
                 <p>({filteredProducts.length})</p>
             </div>

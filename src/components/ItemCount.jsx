@@ -1,9 +1,9 @@
 import { useCounter } from "../hooks/useCounter.js"
 import { Link } from "react-router-dom";
 
-export const ItemCount = ({ outSideStock, initial, itemObj }) => {
+export const ItemCount = ({ initial, itemObj }) => {
 
-    const {purchaseRef, addToTrolley, removeToTrolley, onAdd, stockFlag} = useCounter(outSideStock, initial, itemObj);
+    const {purchaseRef, addToTrolley, removeToTrolley, onAdd, stockFlag} = useCounter(initial, itemObj);
 
     return (
     <div className="itemCount">

@@ -1,6 +1,7 @@
 import { CartContext } from "../context/cartContext";
 import { useContext } from "react";
 import imgBagShop from "../assets/bagshopT.png"
+import toast from 'react-hot-toast';
 
 export const Cart = ({  }) => {
     const cartContext = useContext(CartContext);
@@ -27,7 +28,7 @@ export const Cart = ({  }) => {
                 dayPurchase: new Date(),
             };
             cartContext.enviodedatos(formData);
-        }else{alert("Ingrese el mismo E-mail")};
+        }else toast.error('Ingrese el mismo E-mail', {duration: 3000, position: 'top-center',});
     }
 
     return (
